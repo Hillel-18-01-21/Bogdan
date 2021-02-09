@@ -33,7 +33,7 @@ document.querySelector('#getValues').addEventListener('click', function(){
     (function sort(){
         for(let i = 0; i < arr.length; i++){
             if(arr[i] > arr[i+1]){
-                temp = arr[i];
+                flip = arr[i];
                 arr[i] = arr[i+1];
                 arr[i+1] = temp;
                 sort();

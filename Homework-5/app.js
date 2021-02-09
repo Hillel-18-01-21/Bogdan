@@ -4,7 +4,7 @@ let output = document.querySelector('#output');
 let showInputBtn = document.querySelector('#showInputBtn');
 let arr = [];
 
-inputLength.addEventListener('click', () => inputLength.value = '');
+inputLength.addEventListener('click', () => inputLength.value = ''); 
 showInputBtn.addEventListener('click', ShowInput);
 
 function ShowInput(){
@@ -26,23 +26,22 @@ function ShowInput(){
 
 document.querySelector('#getValues').addEventListener('click', function(){
     let values = document.querySelectorAll('.Getvalue');
-    values.forEach(function(value, index){
-        
+    values.forEach(function(value, index){        
         arr[index] = value.value;
     });
-    (function sort(){
-        for(let i = 0; i < arr.length; i++){
-            if(arr[i] > arr[i+1]){
-                flip = arr[i];
-                arr[i] = arr[i+1];
-                arr[i+1] = temp;
-                sort();
-            }
-        }            
-    }())
+    sort(arr);
     output.innerHTML = `Sorted array: ${arr}`;    
 })
 
-document.querySelector('.reload').addEventListener('click', function(){
-    location.reload();
-})
+function sort(arr){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > arr[i+1]){
+            temp = arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = temp;
+            sort(arr);
+        }
+    }            
+}
+
+document.querySelector('.reload').addEventListener('click', () => location.reload());

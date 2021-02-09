@@ -12,6 +12,7 @@ function ShowInput(){
         document.body.style.background = 'red';
         alert('i asked for 3 or more!!');
     }else{
+        document.body.style.background = 'white';
         for(i = 0; i < inputLength.value; ++i){
         let element = document.createElement('div');
         element.innerHTML = `

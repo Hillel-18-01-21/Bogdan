@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="container" id="length">
+        <label for="length">Enter the length if the array (at least three): </label>
+        <input type="text" id="inputLength" name="length">
+        <button id="showInputBtn" type="button">submit</button>
+    </div>
+    <div class="container" id="values">
+        <button id="getValues">submit</button>
+    </div>
+    <div class="container">
+        <div id="output"></div>
+        <button class="reload">reload</button>
+    </div>
 
     <script src="app.js"></script>
 </body>
-</html>
 
+</html>

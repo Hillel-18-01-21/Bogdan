@@ -36,9 +36,9 @@ document.querySelector('#getValues').addEventListener('click', function(){
 function sort(arr){
     for(let i = 0; i < arr.length; i++){
         if(arr[i] > arr[i+1]){
-            flip = arr[i];
+            temp = arr[i];
             arr[i] = arr[i+1];
-            arr[i+1] = flip;
+            arr[i+1] = temp;
             sort(arr);
         }
     }            

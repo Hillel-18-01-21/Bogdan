@@ -1,0 +1,27 @@
+*{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+body {
+    background-color: black;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    width: 530px;
+    background-color: silver;
+    margin: 10px auto 0;
+    padding: 10px;
+    margin-top: 150px;
+    display: flex;
+}
+
+.operations,
+.output {
+    display: none;  
+}
+
+.buttons {
+    text-align: right;
+}
+
+

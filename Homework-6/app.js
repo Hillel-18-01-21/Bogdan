@@ -56,7 +56,8 @@ function getMultiplesOfThree(arr){
     return 'Multiplies of three: ' + arr.filter(e => e % 3 === 0);
 }
 function getString(arr){
-    return'String: ' + arr.join(`, `);
+    let divider = prompt('Enter the divider');
+    return'String: ' + arr.join(divider);
 }
 function max(arr){
     let max;

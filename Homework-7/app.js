@@ -4,16 +4,7 @@ const listItems = document.getElementsByClassName('list__item');
 const addBtn = document.getElementById('AddElementBtn');
 
 addBtn.addEventListener('click', addElement);
-listContainer.addEventListener('click', (event) => {
-  const target = event.target;
-  const parentEl = target.parentElement;
-  parentEl.lastElementChild.checked += -1;
-  target.checked += -1;
-  parentEl.classList.toggle('checked');
-  if (target.id === 'delete') {
-    parentEl.remove();
-  }
-})
+listContainer.addEventListener('click', checkOrDel);
 inputDescription.addEventListener('click', clearDescription);
 
 function addElement() {
@@ -27,6 +18,17 @@ function addElement() {
   `;
     listContainer.appendChild(listEl);
     clearDescription();
+  }
+}
+
+function checkOrDel(event){
+  const target = event.target;
+  const parentEl = target.parentElement;
+  parentEl.lastElementChild.checked += -1;
+  target.checked += -1;
+  parentEl.classList.toggle('checked');
+  if (target.id === 'delete') {
+    parentEl.remove();
   }
 }
 

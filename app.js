@@ -17,13 +17,14 @@ function setColor(){
 
 function moveFigure(event){
   let x = event.clientX;
-  let y = event.clientY;  
-  if(y < 375 && y > 200 && x < 1275 && x > 1025){
-    console.log(event);
+  let y = event.clientY;
+  let h = getComputedStyle(event.currentTarget.firstElementChild).height;
+  h = parseInt(h);
+  if(y < 606 - h/2 && y > 164 + h/2 && x < 1323 && x > 975){
     figure.style.position = 'absolute';
-    figure.style.top = event.clientY - 35 + 'px';
+    figure.style.top = event.clientY - h/2 + 'px';
     figure.style.left = event.clientX - 35 + 'px';
-  }  
+  }
 }
 
 

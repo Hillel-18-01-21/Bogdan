@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+button::-mooz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+}
+
+body {
+  background: url("https://image.freepik.com/free-photo/pastel-watercolor-texture-background_1083-168.jpg?1") center/cover;
+  padding-top: 150px;
+}
+
+/* 
+#2a362f */
+
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #94d6ba;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+}
+
+.figure-container {
+  flex: 1;
+  margin-left: 15px;
+  padding: 120px 0 ;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.constructor {
+  color: #2a362f;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.shape {
+  background-color: #6d8b79;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: rgb(235, 250, 243);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all .1s linear;
+}
+.shape:hover{
+  background-color: #5d7567;
+}
+.color{
+  background-color: #6d8b79;
+  width: 19px;
+  height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.square, .circle, .rectangle{
+  width: 70px;
+  height: 70px;
+  background-color: black;
+}
+.circle {
+  border-radius: 50%;
+}
+.rectangle{
+  height: 170px;
+}
+
+.constructor__btn{
+  padding:5px 10px;
+  background-color: #5d7567;
+  border-radius: 5px;
+  box-shadow: 0 2px 1px #333f38;
+  transition: all .1s linear;
+  color: rgb(235, 250, 243);
+}
+.constructor__btn:hover{
+  background-color: #51685b;
+}
+.constructor__btn:active{
+  background-color: #51685b;
+  transform: translateY(2px);
+  box-shadow: none;
+}

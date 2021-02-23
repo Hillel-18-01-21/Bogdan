@@ -1,1 +1,1 @@
-consol.log('hello from hw')
+console.log('hello from hw')

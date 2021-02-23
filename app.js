@@ -1,1 +1,1 @@
-document.write('hello from hw8')
+consol.log('hello from hw')

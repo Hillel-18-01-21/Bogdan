@@ -17,31 +17,33 @@ function setColor() {
 
 function moveFigure(event) {
   let h = getComputedStyle(event.target).height;
-      h = parseInt(h);
-      
+      h = parseInt(h);  
+
+  figureContainer.addEventListener('mousemove', onMouseMove);
+  figure.addEventListener('mouseup', removeListener);
+
   moveAT(event.clientX, event.clientY);
 
   function moveAT(x, y) {
     if (y < 711 - h / 2 && y > 267 + h / 2 && x < 1325 && x > 724) {
       figure.style.left = x - figure.offsetWidth / 2 + 'px';
       figure.style.top = y - figure.offsetHeight / 2 + 'px';
-    } else if (!(y < 709 && y > 267 && x < 1358 && x > 689)) {        //works correctly at normal mouse speed 
-      figureContainer.removeEventListener('mousemove', onMouseMove);
     } else if (y < 711 - h / 2 && y > 267 + h / 2) {
       figure.style.top = y - figure.offsetHeight / 2 + 'px';
     } else if (x < 1325 && x > 724) {
       figure.style.left = x - figure.offsetWidth / 2 + 'px';
     }
-}
+  }
 
   function onMouseMove(event) {
     moveAT(event.clientX, event.clientY);
-  }
+    console.log(event.target.parentNode.className)
+    if(event.target.parentNode.className !== 'figure-container'){
+    removeListener();
+    }
+  } 
 
-  figureContainer.addEventListener('mousemove', onMouseMove);
-
-  figure.onmouseup = function () {
+  function removeListener(){
     figureContainer.removeEventListener('mousemove', onMouseMove);
-    figure.onmouseup = null;
   }
 }

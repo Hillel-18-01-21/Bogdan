@@ -109,11 +109,11 @@ body {
   border-radius: 15px;
   padding: 15px;
   display: flex;
+  margin-bottom: 15px;
 }
 
 .figure-container {
   flex: 1;
-  margin-left: 15px;
   padding: 220px 0 ;
   cursor: pointer;
   border: 1px solid #2a332f;
@@ -150,6 +150,9 @@ body {
   width: 70px;
   height: 70px;
   background-color: black;
+  position: absolute;
+  top: 400px;
+  left: 995px;
 }
 .circle {
   border-radius: 50%;

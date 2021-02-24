@@ -37,7 +37,6 @@ function moveFigure(event) {
 
   function onMouseMove(event) {
     moveAT(event.clientX, event.clientY);
-    console.log(event.target.parentNode.className)
     if(event.target.parentNode.className !== 'figure-container'){
     removeListener();
     }

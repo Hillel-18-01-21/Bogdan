@@ -1,4 +1,5 @@
-const body = document.body;
+const body            = document.body;
+const container       = document.querySelector('.container');
 const color           = document.getElementById('color');
 const shape           = document.getElementById('shape');
 const figureContainer = document.getElementById('figureContainer');
@@ -17,26 +18,34 @@ function setColor() {
 }
 
 function moveFigure(event) {
-  let h = getComputedStyle(event.target).height;
-      h = parseInt(h);
+  let containerWidth    = getComputedStyle(figureContainer).width;
+      containerWidth    = parseInt(containerWidth);
+  let leftBorder        = getComputedStyle(container).marginLeft;
+      leftBorder        = parseInt(leftBorder);    
+  let rightBorder       = leftBorder + containerWidth;
+  let h                 = getComputedStyle(event.target).height;
+      h                 = parseInt(h);
       
   figureContainer.addEventListener('mousemove', onMouseMove);
   figure.addEventListener('mouseup', removeListener);
   body.addEventListener('mouseover', checkArea);
+  window.addEventListener('resize', checkResize)
 
   function moveAT(x, y) {
-    if (y < 711 - h / 2 && y > 267 + h / 2 && x < 1325 && x > 724) {
-      figure.style.left = x - figure.offsetWidth / 2 + 'px';
-      figure.style.top = y - figure.offsetHeight / 2 + 'px';
+    
+    figure.style.position = 'absolute';
+    if (y < 711 - h / 2 && y > 267 + h / 2 && x < rightBorder - 20 && x > leftBorder + 50) {
+      figure.style.left = x - figure.offsetWidth / 2  + 'px';
+      figure.style.top  = y - figure.offsetHeight / 2 + 'px';
     } else if (y < 711 - h / 2 && y > 267 + h / 2) {
-      figure.style.top = y - figure.offsetHeight / 2 + 'px';
-    } else if (x < 1325 && x > 724) {
-      figure.style.left = x - figure.offsetWidth / 2 + 'px';
+      figure.style.top  = y - figure.offsetHeight / 2 + 'px';
+    } else if (x < rightBorder - 20 && x > leftBorder + 50) {
+      figure.style.left = x - figure.offsetWidth / 2  + 'px';
     }
   }
 
   function onMouseMove(event) {
-    moveAT(event.clientX, event.clientY);
+    moveAT(event.pageX, event.pageY);
   } 
 
   function removeListener(){
@@ -46,6 +55,14 @@ function moveFigure(event) {
   function checkArea(event){
     if(event.target === body){
       removeListener();
+    }
+  }
+
+  function checkResize(){
+    figure.style.left ='40%';
+    figure.style.top  = '60%';
+    if(window.innerHeight < 500){
+      figure.style.top  = '90%';
     }
   }
 }

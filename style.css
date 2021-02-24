@@ -150,9 +150,6 @@ body {
   width: 70px;
   height: 70px;
   background-color: black;
-  position: absolute;
-  top: 400px;
-  left: 995px;
 }
 .circle {
   border-radius: 50%;

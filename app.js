@@ -1,3 +1,4 @@
+const body = document.body;
 const color           = document.getElementById('color');
 const shape           = document.getElementById('shape');
 const figureContainer = document.getElementById('figureContainer');
@@ -17,12 +18,11 @@ function setColor() {
 
 function moveFigure(event) {
   let h = getComputedStyle(event.target).height;
-      h = parseInt(h);  
-
+      h = parseInt(h);
+      
   figureContainer.addEventListener('mousemove', onMouseMove);
   figure.addEventListener('mouseup', removeListener);
-
-  moveAT(event.clientX, event.clientY);
+  body.addEventListener('mouseover', checkArea);
 
   function moveAT(x, y) {
     if (y < 711 - h / 2 && y > 267 + h / 2 && x < 1325 && x > 724) {
@@ -41,5 +41,11 @@ function moveFigure(event) {
 
   function removeListener(){
     figureContainer.removeEventListener('mousemove', onMouseMove);
+  }
+
+  function checkArea(event){
+    if(event.target === body){
+      removeListener();
+    }
   }
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator v3.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="screen">
+      <h1 class="screen__title">Enter the operands and operation:</h1>
+      <form action="" class="input-form">
+        <input type="text" class="operand" id="firstOperand" placeholder="first operand">
+        <select id="operations" class="operations">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+          <option value="%">%</option>
+        </select>
+        <input type="text" class="operand" id="secondOperand" placeholder="second operand">
+        <button type="button" class="button" id="calcBtn">Enter</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="calculations">
+      <h1 class="calculations__title">Calculations: </h1>
+      <ol class="calculations__list" id="calcList"></ol>
+    </div>
+  </div>
+  <script type="template/html" id="li-template">
+    <span class="calculations__item__time">{{time}}</span>
+    <span class="calculations__item__text">{{a}} {{operation}} {{b}} = {{result}}</span>
+    <img class="calculations__item__delete" id="deleteBtn" src="img/trash.svg" alt="delete">
+  </script>
+  <script src="app.js" async></script>
+</body>
+
+</html>

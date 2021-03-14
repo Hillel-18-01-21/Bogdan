@@ -1,3 +1,4 @@
+
 const buttons = document.querySelectorAll('.fibBtn');
 
 buttons.forEach((item) => {

@@ -29,12 +29,10 @@ function Hamburger(size) {
     }
   }
   this.getPrice = function () {
-    let price = this._getPriceAndCalsForSize(this.size, 1) + this.price;
-    console.log('Total price: ' + price + '¥');
+    return this._getPriceAndCalsForSize(this.size, 1) + this.price;
   }
   this.getCallories = function () {
-    let cals = this._getPriceAndCalsForSize(this.size, 2) + this.calories;
-    console.log('All callories: ' + cals);
+    return this._getPriceAndCalsForSize(this.size, 2) + this.calories;
   }
   this._getPriceAndCalsForSize = function (size, mode) {
     let price;
@@ -65,5 +63,5 @@ const hamburger = new Hamburger('LARGE');
 
 hamburger.addTopping('MAYO');
 hamburger.addTopping('SALAD');
-hamburger.getPrice();
-hamburger.getCallories();
+console.log('Total price: ' + hamburger.getPrice() + '¥');
+console.log('All callories: ' + hamburger.getCallories());

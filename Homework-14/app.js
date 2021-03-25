@@ -1,2 +1,4 @@
-const accordeon = new Accordeon('accordeon');
+const container = document.getElementById('accordeon');
+
+const accordeon = new Accordeon(container);
 

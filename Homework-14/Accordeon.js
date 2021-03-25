@@ -1,5 +1,5 @@
-function Accordeon(containerId) {
-  this.container = document.getElementById(containerId);
+function Accordeon(container) {
+  this.container = container;
   this.accordeonItems = [];
 
   this.init();

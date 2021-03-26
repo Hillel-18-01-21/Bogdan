@@ -56,3 +56,4 @@ Accordeon.prototype._showItemContent = function (allItems) {
 //     }
 //   }
 // }
+

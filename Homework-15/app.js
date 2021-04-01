@@ -43,7 +43,3 @@ class LoginForm {
 
 const loginForm = new LoginForm();
 
-// промисы
-// fetch
-// использовать onload или onerror
-// 

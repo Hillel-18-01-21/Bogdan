@@ -1,12 +1,10 @@
 class LoginForm {
   constructor() {
+    this.containerEl = document.querySelector('.container');
+    this.formEl = document.getElementById('loginForm')
     this.emailInputEl = document.getElementById('email');
     this.passwordInputEl = document.getElementById('password');
-    this.submitButton = document.getElementById('submitBtn');
     this.errorEl = document.getElementById('errorText');
-    this.containerEl = document.querySelector('.container');
-    this.xhr = new XMLHttpRequest();
-    this.data = {};
 
     this.init();
   }
@@ -15,31 +13,42 @@ class LoginForm {
   //   "password": "cityslicka"
 
   init() {
-    this.submitButton.addEventListener('click', this._onButtonClick.bind(this));
+    this.formEl.addEventListener('submit', this._onSubmit.bind(this));
   }
 
-  _onButtonClick(e) {
+  _onSubmit(e) {
     e.preventDefault();
-    this.data.email = this.emailInputEl.value;
-    this.data.password = this.passwordInputEl.value;
-    this.login(this.data);
-  }
-
-  login(data) {
-    this.xhr.open('POST', 'https://reqres.in/api/login', true);
-    this.xhr.setRequestHeader('Content-Type', 'application/JSON')
-    this.xhr.send(JSON.stringify(data));
-    this.xhr.onload = () => {
-      if (this.xhr.status == 200) {
-        console.log('success!!');
-        this.containerEl.innerText = 'success!!';
-      } else {
-        this.errorEl.innerText = JSON.parse(this.xhr.response).error;
-        this.passwordInputEl.value = '';
+    this._checkUserCredentails(
+      this.emailInputEl.value,
+      this.passwordInputEl.value,
+      (response) => {
+        if (response.status >= 200 && response.status <= 300) {
+          console.log('success!');
+          this.containerEl.innerText = 'success!!';
+        } else {
+          this.errorEl.innerText = response.data.error;
+          this.passwordInputEl.value = '';
+        }
       }
+    );
+  }
+  _checkUserCredentails(email, password, calback) {
+    const xhr = new XMLHttpRequest();
+    const data = {
+      email: email,
+      password: password,
+    }
+    xhr.open('POST', 'https://reqres.in/api/login', true);
+    xhr.setRequestHeader('Content-Type', 'application/JSON')
+    xhr.send(JSON.stringify(data));
+    xhr.onload = () => {
+      const response = {
+        status: xhr.status,
+        data: JSON.parse(xhr.response),
+      }
+      calback(response);
     }
   }
 }
 
 const loginForm = new LoginForm();
-

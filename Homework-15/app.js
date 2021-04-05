@@ -44,7 +44,7 @@ class LoginForm {
     xhr.onload = () => {
       const response = {
         status: xhr.status,
-        data: JSON.parse(xhr.response),
+        data: JSON.parse(xhr.response) || xhr.response,
       }
       calback(response);
     }

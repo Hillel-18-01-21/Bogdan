@@ -26,7 +26,7 @@ class LoginForm {
           console.log('success!');
           this.containerEl.innerText = 'success!!';
         } else {
-          this.errorEl.innerText = response.data.error;
+          this.errorEl.innerText = response.data.error || 'incorrect email or password';
           this.passwordInputEl.value = '';
         }
       }
@@ -44,7 +44,7 @@ class LoginForm {
     xhr.onload = () => {
       const response = {
         status: xhr.status,
-        data: JSON.parse(xhr.response) || xhr.response,
+        data: JSON.parse(xhr.response),
       }
       calback(response);
     }

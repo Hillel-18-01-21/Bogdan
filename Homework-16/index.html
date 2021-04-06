@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
+  <script src="loginForm.js" defer></script>
+  <script src="mainPage.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -28,6 +30,13 @@
           <span class="second-name">{{secondName}}</span></div>
         <div class="user__email">{{email}}</div>
       </li>
+  </script>
+  <script id="mainPage-template" type="text/template">
+    <div class="mainPage">
+      <ul class="usersList"></ul>
+      <button class="prev"></button>
+      <button class="next"></button>
+    </div>
   </script>
 </body>
 

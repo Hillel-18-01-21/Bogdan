@@ -151,10 +151,29 @@ button {
   margin-top: 17px;
 }
 
-.usersList {
+.mainPage {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+}
+
+.usersList {
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.prev,
+.next {
+  background: url('./img/arrow.svg') center no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+button.prev {
+  transform: rotate(180deg);
 }
 
 .user {
@@ -166,7 +185,3 @@ button {
 .user__name {
   margin: 10px 0 5px;
 }
-
-.user__email {}
-
-.user__avatar {}

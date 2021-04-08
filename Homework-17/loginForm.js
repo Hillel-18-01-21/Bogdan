@@ -1,11 +1,11 @@
 class LoginForm {
-  constructor(calback) {
+  constructor(onLoginCallback) {
     this.containerEl = document.querySelector('.container');
     this.formEl = document.getElementById('loginForm')
     this.emailInputEl = document.getElementById('email');
     this.passwordInputEl = document.getElementById('password');
     this.errorEl = document.getElementById('errorText');
-    this.onLogin = calback;
+    this.onLogin = onLoginCallback;
 
     this.init();
   }

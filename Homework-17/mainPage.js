@@ -1,7 +1,7 @@
 class MainPage {
-  constructor(userTemplate, mainPageTemplate) {
-    this.userTemplate = userTemplate.innerHTML;
-    this.mainPageTemplate = mainPageTemplate.innerHTML;
+  constructor(userElTemplate, mainPageElTemplate) {
+    this.userElTemplate = userElTemplate.innerHTML;
+    this.mainPageElTemplate = mainPageElTemplate.innerHTML;
     this.containerEl = document.querySelector('.container');
     this._usersListEl = null;
     this.currentPage = 1;
@@ -9,7 +9,7 @@ class MainPage {
   }
 
   init() {
-    this.containerEl.innerHTML = this.mainPageTemplate;
+    this.containerEl.innerHTML = this.mainPageElTemplate;
     this._usersListEl = document.querySelector('.usersList');
     document.querySelector('.prev').addEventListener('click', this._onPrevBtn.bind(this));
     document.querySelector('.next').addEventListener('click', this._onNextBtn.bind(this));
@@ -34,7 +34,7 @@ class MainPage {
         for (let i = 0; i < users.data.length; i++) {
           const user = document.createElement("li");
           user.className = 'user';
-          user.innerHTML = this.userTemplate
+          user.innerHTML = this.userElTemplate
             .replace('{{avatar}}', users.data[i].avatar)
             .replace('{{firstName}}', users.data[i].first_name)
             .replace('{{secondName}}', users.data[i].last_name)
@@ -77,9 +77,9 @@ class MainPage {
 // ============================================================
 
 // class MainPage {
-//   constructor(userTemplate, mainPageTemplate) {
-//     this.userTemplate = userTemplate.innerHTML;
-//     this.mainPageTemplate = mainPageTemplate.innerHTML;
+//   constructor(userElTemplate, mainPageElTemplate) {
+//     this.userElTemplate = userElTemplate.innerHTML;
+//     this.mainPageElTemplate = mainPageElTemplate.innerHTML;
 //     this.containerEl = document.querySelector('.container');
 //     this._usersListEl = null;
 //     this.currentPage = 1;
@@ -87,7 +87,7 @@ class MainPage {
 //   }
 
 //   init() {
-//     this.containerEl.innerHTML = this.mainPageTemplate;
+//     this.containerEl.innerHTML = this.mainPageElTemplate;
 //     this._usersListEl = document.querySelector('.usersList');
 //     document.querySelector('.prev').addEventListener('click', this._onPrevBtn.bind(this));
 //     document.querySelector('.next').addEventListener('click', this._onNextBtn.bind(this));
@@ -118,7 +118,7 @@ class MainPage {
 //     for (let i = 0; i < users.data.length; i++) {
 //       const user = document.createElement("li");
 //       user.className = 'user';
-//       user.innerHTML = this.userTemplate
+//       user.innerHTML = this.userElTemplate
 //         .replace('{{avatar}}', users.data[i].avatar)
 //         .replace('{{firstName}}', users.data[i].first_name)
 //         .replace('{{secondName}}', users.data[i].last_name)

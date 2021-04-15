@@ -3,6 +3,7 @@ class ToDoConstructor {
     this.constructorEl = constructorEl;
     this._inputToDoEl = null;
     this._constructorFrom = null;
+    this._showRemoteBtn = null;
     this._toDoList = new ToDoList(toDoListEl);
 
     this.init();
@@ -19,14 +20,20 @@ class ToDoConstructor {
     this.constructorEl.html(html);
     this._inputToDoEl = $('#inputToDo');
     this._constructorFrom = $('.constructor__form');
-    this._constructorFrom.on('submit', this, this._onAddBtnClick);
+    this._showRemoteBtn = $('#showRemoteBtn');
+    this._constructorFrom.submit(this, this._onAddBtnClick);
+    this._showRemoteBtn.click(this, this._onShowRemoteBtnClick);
+
   }
   _onAddBtnClick(e) {
     e.preventDefault();
-    const toDoText = e.data._inputToDoEl.val();
-    if (toDoText) {
+    const toDoItem = {
+      title: e.data._inputToDoEl.val(),
+      completed: false,
+    }
+    if (toDoItem.title) {
       e.data._inputToDoEl.val('');
-      e.data._toDoList._addToDo(toDoText);
+      e.data._toDoList._addToDo(toDoItem);
     }
   }
 }

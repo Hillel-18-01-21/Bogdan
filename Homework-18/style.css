@@ -151,6 +151,7 @@ body {
 
 .constructor__btn {
   padding: 7px 14px;
+  max-width: 100%;
   width: 100%;
   border-radius: 15px;
   font-family: inherit;
@@ -167,6 +168,29 @@ body {
 .constructor__btn:active {
   transform: translateY(3px);
   box-shadow: 0 0 #2a362f;
+}
+
+.constructor__options {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.constructor__options span{
+  color: black;
+  margin-left: 5px;
+}
+
+.constructor__options input{
+  background-color: #2a362f;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  margin-left: 5px;
+}
+
+.constructor__options input::placeholder {
+  color: white;
 }
 
 .list__item {
@@ -193,11 +217,20 @@ body {
 
 .list__item__content {
   flex: 1 1 100%;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
 }
 
-.delete {
+.delete,
+.change {
   width: 15px;
   margin-right: 15px;
+  transition: all .2s ease-in-out'
+}
+
+.delete:hover {
+  transform: scale(1.1);
 }
 
 .border{

@@ -54,8 +54,8 @@ class ToDoList {
     const index = itemEl.attr('id');
     const item = e.data._toDoList[index];
 
-    // itemEl.toggleClass('checked'); ???
-    // itemEl.children().last().attr('checked', !itemEl.children().last().attr('checked')) ???
+    itemEl.toggleClass('checked'); 
+    itemEl.children().last().attr('checked', !itemEl.children().last().attr('checked')) 
 
     fetch(`https://retoolapi.dev/mqBTCx/todo/${item.id}`, {
       method: 'PUT',

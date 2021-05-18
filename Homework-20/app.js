@@ -13,13 +13,13 @@
 // console.log(fac(100n));
 // console.log(fac(10000));
 
-// // function fac(n) {
-// //   if (n > 1) {
-// //     return BigInt(n) * fac(n - 1);
-// //   }else{
-// //     return 1n;
-// //   }
-// // }
+// function fac(n) {
+//   if (n > 1) {
+//     return BigInt(n) * fac(n - 1);
+//   }else{
+//     return 1n;
+//   }
+// }
 
 // // console.log(fac(2));
 // // console.log(fac(5));

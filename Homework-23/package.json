@@ -1,0 +1,22 @@
+{
+  "name": "nestter",
+  "version": "1.0.0",
+  "description": "Social networking service on which users post and interact with messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "StraightCode",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-sourcemaps": "^3.0.0",
+    "nes.css": "^2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^6.0.0"
+  }
+}

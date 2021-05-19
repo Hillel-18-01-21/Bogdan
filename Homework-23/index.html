@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nesttor</title>
+  <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="sidebar-left">
+      <div class="logo">
+        <i class="nes-icon twitter"></i>
+      </div>
+      <nav class="nav-menu">
+        <a class="nes-btn nav-menu__item" href="#">Home</a>
+        <a class="nes-btn nav-menu__item" href="#">Explore</a>
+        <a class="nes-btn nav-menu__item" href="#">Notifications</a>
+        <a class="nes-btn nav-menu__item" href="#">Messages</a>
+        <a class="nes-btn nav-menu__item" href="#">Bookmarks</a>
+        <a class="nes-btn nav-menu__item" href="#">Lists</a>
+        <a class="nes-btn nav-menu__item" href="#">Profile</a>
+        <a class="nes-btn nav-menu__item" href="#">More</a>
+      </nav>
+
+      <button type="button" class="nes-btn is-primary sidebar-left__tweet-btn">Tweet</button>
+
+      <div class="nes-balloon sidebar-left__account-menu">
+        <div class="account-menu__avatar"><img src="src/img/left-sidbar/user.svg" alt=""></div>
+        <div class="account-menu__name">
+          <div class="account-menu__nikname">username</div>
+          <div class="account-menu__login">@username</div>
+        </div>
+        <div class="account-menu__more-btn">
+          <img src="src/img/left-sidbar/more.svg" alt="">
+        </div>
+
+        <div class="nes-balloon from-left account-menu__popup active">
+          <div class="account-menu__avatar margin-left"><img src="src/img/left-sidbar/user.svg" alt=""></div>
+          <div class="account-menu__name">
+            <div class="account-menu__nikname">username</div>
+            <div class="account-menu__login">@username</div>
+          </div>
+          <div class="account-menu__more-btn">
+            <img src="src/img/left-sidbar/arrow-down.svg" alt="">
+          </div>
+          <a class="nes-btn account-menu__popup__btn" href="#">Add an existing account</a>
+          <a class="nes-btn account-menu__popup__btn" href="#">Log out @Weedsurf</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-content nes-container is-rounded">
+      <div class="main-content__header">
+        <h1 class="main-content__header__title">Home</h1>
+        <a class="main-content__header__button"><img src="src/img/main-content/shining.svg" alt=""></a>
+      </div>
+
+      <div class="main-content__item">
+        <div class="main-contetn__item__avatar"><img src="src/img/main-content/user.svg" alt=""></div>
+        <div class="main-content__item__new-tweet-constructor new-tweet-constructor">
+          <textarea id="textarea_field" rows="3" class="nes-textarea new-twitt-constructor__textarea"></textarea>
+          <div class="new-tweet-constructor__footer">
+            <div class="new-tweet-constructor__footer__features">
+              <a href="" class="new-tweet-constructor__footer__features__item"><img src="src/img/main-content/image.svg"
+                  alt=""></a>
+              <a href="" class="new-tweet-constructor__footer__features__item"><img src="src/img/main-content/gif.svg"
+                  alt=""></a>
+              <a href="" class="new-tweet-constructor__footer__features__item"><img src="src/img/main-content/poll.svg"
+                  alt=""></a>
+              <a href="" class="new-tweet-constructor__footer__features__item"><img src="src/img/main-content/smile.svg"
+                  alt=""></a>
+              <a href="" class="new-tweet-constructor__footer__features__item"><img src="src/img/main-content/calendar.svg"
+                  alt=""></a>
+            </div>
+            <button class="nes-btn is-primary new-tweet-constructor__footer__btn">Tweet</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content__item post">
+        <div class="post__avatar"><img src="src/img/main-content/starship.png" alt=""></div>
+        <div class="post__header">
+          <a class="post__author-name">Elon Musk</a>
+          <a class="post__author-login">@elonmusk</a>
+          <a class="post__timer">31m</a>
+          <a class="post__more-btn"><img src="src/img/main-content/more.svg" alt=""></a>
+        </div>
+        <div class="post__text">guest starting ...</div>
+        <div class="post__photo"><img src="src/img/main-content/elon.jpg" alt=""></div>
+        <div class="post__footer">
+          <a href="" class="post__footer__item post__footer__item__reply">
+            <div class="post__footer__item__img"><img src="src/img/main-content/comment.svg" alt=""></div>
+            <span class="post__footer__item__counter">16.2K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__retweet">
+            <div class="post__footer__item__img"><img src="src/img/main-content/retweet.svg" alt=""></div>
+            <span class="post__footer__item__counter">48.2K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__like">
+            <div class="post__footer__item__img"><img src="src/img/main-content/heart.svg" alt=""></div>
+            <span class="post__footer__item__counter">212.5K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__share">
+            <div class="post__footer__item__img"><img src="src/img/main-content/upload.svg" alt=""></div>
+          </a>
+        </div>
+      </div>
+      <div class="main-content__item post">
+        <div class="post__avatar"><img src="src/img/main-content/starship.png" alt=""></div>
+        <div class="post__header">
+          <a class="post__author-name">Elon Musk</a>
+          <a class="post__author-login">@elonmusk</a>
+          <a class="post__timer">31m</a>
+          <a class="post__more-btn"><img src="src/img/main-content/more.svg" alt=""></a>
+        </div>
+        <div class="post__text">guest starting ...</div>
+        <div class="post__photo"><img src="src/img/main-content/elon.jpg" alt=""></div>
+        <div class="post__footer">
+          <a href="" class="post__footer__item post__footer__item__reply">
+            <div class="post__footer__item__img"><img src="src/img/main-content/comment.svg" alt=""></div>
+            <span class="post__footer__item__counter">16.2K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__retweet">
+            <div class="post__footer__item__img"><img src="src/img/main-content/retweet.svg" alt=""></div>
+            <span class="post__footer__item__counter">48.2K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__like">
+            <div class="post__footer__item__img"><img src="src/img/main-content/heart.svg" alt=""></div>
+            <span class="post__footer__item__counter">212.5K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__share">
+            <div class="post__footer__item__img"><img src="src/img/main-content/upload.svg" alt=""></div>
+          </a>
+        </div>
+      </div>
+      <div class="main-content__item post">
+        <div class="post__avatar"><img src="src/img/main-content/starship.png" alt=""></div>
+        <div class="post__header">
+          <a class="post__author-name">Elon Musk</a>
+          <a class="post__author-login">@elonmusk</a>
+          <a class="post__timer">31m</a>
+          <a class="post__more-btn"><img src="src/img/main-content/more.svg" alt=""></a>
+        </div>
+        <div class="post__text">guest starting ...</div>
+        <div class="post__photo"><img src="src/img/main-content/elon.jpg" alt=""></div>
+        <div class="post__footer">
+          <a href="" class="post__footer__item post__footer__item__reply">
+            <div class="post__footer__item__img"><img src="src/img/main-content/comment.svg" alt=""></div>
+            <span class="post__footer__item__counter">16.2K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__retweet">
+            <div class="post__footer__item__img"><img src="src/img/main-content/retweet.svg" alt=""></div>
+            <span class="post__footer__item__counter">48.2K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__like">
+            <div class="post__footer__item__img"><img src="src/img/main-content/heart.svg" alt=""></div>
+            <span class="post__footer__item__counter">212.5K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__share">
+            <div class="post__footer__item__img"><img src="src/img/main-content/upload.svg" alt=""></div>
+          </a>
+        </div>
+      </div>
+      <div class="main-content__item post">
+        <div class="post__avatar"><img src="src/img/main-content/starship.png" alt=""></div>
+        <div class="post__header">
+          <a class="post__author-name">Elon Musk</a>
+          <a class="post__author-login">@elonmusk</a>
+          <a class="post__timer">31m</a>
+          <a class="post__more-btn"><img src="src/img/main-content/more.svg" alt=""></a>
+        </div>
+        <div class="post__text">guest starting ...</div>
+        <div class="post__photo"><img src="src/img/main-content/elon.jpg" alt=""></div>
+        <div class="post__footer">
+          <a href="" class="post__footer__item post__footer__item__reply">
+            <div class="post__footer__item__img"><img src="src/img/main-content/comment.svg" alt=""></div>
+            <span class="post__footer__item__counter">16.2K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__retweet">
+            <div class="post__footer__item__img"><img src="src/img/main-content/retweet.svg" alt=""></div>
+            <span class="post__footer__item__counter">48.2K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__like">
+            <div class="post__footer__item__img"><img src="src/img/main-content/heart.svg" alt=""></div>
+            <span class="post__footer__item__counter">212.5K</span>
+          </a>
+          <a href="" class="post__footer__item post__footer__item__share">
+            <div class="post__footer__item__img"><img src="src/img/main-content/upload.svg" alt=""></div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar-right">
+      <div class="sidebar-right__search">
+        <input type="text" id="name_field" class="nes-input sidebar-right__search__input" placeholder="Search Twitter">
+      </div>
+
+      <div class="sidebar-right__trends trends nes-container is-rounded">
+        <div class="trends__header">
+          <div class="trends__header__title">Trends for you</div>
+          <div class="trends__header__settings-btn nes-pointer"><img src="src/img/right-sidebar/settings.svg" alt=""></div>
+        </div>
+        <div class="trends__items">
+          <div class="trends__item nes-pointer">
+            <div class="trends__item__country">Trending in Ukrane</div>
+            <div class="trens__item__title">Правильно</div>
+            <div class="trends__item__tweets">3,364 Tweets</div>
+            <div class="trends__item__more-btn"><img src="src/img/right-sidebar/more.svg" alt=""></div>
+          </div>
+          <div class="trends__item nes-pointer">
+            <div class="trends__item__country">Trending in Ukrane</div>
+            <div class="trens__item__title">Простите</div>
+            <div class="trends__item__tweets">2,13M Tweets</div>
+            <div class="trends__item__more-btn"><img src="src/img/right-sidebar/more.svg" alt=""></div>
+          </div>
+          <div class="trends__item nes-pointer">
+            <div class="trends__item__country">Trending in Ukrane</div>
+            <div class="trens__item__title">Порошенко</div>
+            <div class="trends__item__tweets">7,049 Tweets</div>
+            <div class="trends__item__more-btn"><img src="src/img/right-sidebar/more.svg" alt=""></div>
+          </div>
+          <div class="trends__item nes-pointer">
+            <div class="trends__item__country">Trending in Ukrane</div>
+            <div class="trens__item__title">Santa Monika</div>
+            <div class="trends__item__tweets">2,855 Tweets</div>
+            <div class="trends__item__more-btn"><img src="src/img/right-sidebar/more.svg" alt=""></div>
+          </div>
+          <div class="trends__item nes-pointer">
+            <div class="trends__item__country">Trending in Ukrane</div>
+            <div class="trens__item__title">Похожее</div>
+            <div class="trends__item__tweets">38,5K Tweets</div>
+            <div class="trends__item__more-btn"><img src="src/img/right-sidebar/more.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="trends__footer nes-pointer">
+          <a href="" class="trends__footer__show-more-btn">Show more</a>
+        </div>
+      </div>
+
+      <div class="sidebar-right__WTF WTF nes-container is-rounded">
+        <div class="WTF__title">Who to follow</div>
+        <div class="WTF__items">
+          <div class="WTF__item">
+            <div class="WTF__item__avatr"><img src="src/img/right-sidebar/netflix.png" alt=""></div>
+            <div class="WTF__item__account">
+              <div class="WTF__item__account__name">Netflix</div>
+              <div class="WTF__item__account__link">@netflix</div>
+            </div>
+            <button class="WTF__itmem__follow-btn nes-btn is-primary">Follow</button>
+          </div>
+          <div class="WTF__item">
+            <div class="WTF__item__avatr"><img src="src/img/right-sidebar/netflix.png" alt=""></div>
+            <div class="WTF__item__account">
+              <div class="WTF__item__account__name">Netflix</div>
+              <div class="WTF__item__account__link">@netflix</div>
+            </div>
+            <button class="WTF__itmem__follow-btn nes-btn is-primary">Follow</button>
+          </div>
+          <div class="WTF__item">
+            <div class="WTF__item__avatr"><img src="src/img/right-sidebar/netflix.png" alt=""></div>
+            <div class="WTF__item__account">
+              <div class="WTF__item__account__name">Netflix</div>
+              <div class="WTF__item__account__link">@netflix</div>
+            </div>
+            <button class="WTF__itmem__follow-btn nes-btn is-primary">Follow</button>
+          </div>
+        </div>
+        <div class="WTF__footer nes-pointer">
+          <a href="" class="WTF__footer__show-more-btn">Show more</a>
+        </div>
+      </div>
+
+      <div class="sidebar-right__copyright">
+        <a href="" class="sidebar-right__copyright__item">Therms of Service</a>
+        <a href="" class="sidebar-right__copyright__item">Privacy Policy</a>
+        <a href="" class="sidebar-right__copyright__item">Cookie Policy</a>
+        <a href="" class="sidebar-right__copyright__item">Ads info</a>
+        <a href="" class="sidebar-right__copyright__item">More...</a>
+        <a href="" class="sidebar-right__copyright__item">© 2021 Twitter, Inc.</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
